@@ -4,7 +4,7 @@ package com.wbl.Basics;
 
 public class Fibonacii {
 
-	public static void febonicii(int num) {
+/*	public static void febonicii(int num) {
 
 		int n1 = 0;
 		int n2 = 1;
@@ -20,7 +20,7 @@ public class Fibonacii {
 			n2 = temp;
 		}
 
-	}
+	}*/
 
 	public static void main(String[] args) {
 
