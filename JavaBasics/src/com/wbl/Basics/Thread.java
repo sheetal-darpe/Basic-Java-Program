@@ -2,16 +2,14 @@ package Thread;
 
 public class MyDeadlock {
 
-    String str1 = "Java";
-    String str2 = "UNIX";
+    private String str1 = "Java";
+    private String str2 = "UNIX";
 
     Thread trd1 = new Thread("My Thread 1"){
         public void run(){
-            while(true){
-                synchronized(str1){
-                    synchronized(str2){
-                        System.out.println(str1 + str2);
-                    }
+            while(true) synchronized (str1) {
+                synchronized (str2) {
+                    System.out.println(str1 + str2);
                 }
             }
         }
@@ -21,8 +19,11 @@ public class MyDeadlock {
         public void run(){
             while(true){
                 synchronized(str2){
+
+
                     synchronized(str1){
                         System.out.println(str2 + str1);
+
                     }
                 }
             }
